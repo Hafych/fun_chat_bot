@@ -1,0 +1,8 @@
+pyjokes
+art
+emoji
+prettytable
+tqdm
+fabulous
+colorama
+termcolor
