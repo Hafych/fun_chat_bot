@@ -1,17 +1,21 @@
 # utils/style.py
-from colorama import Fore, Style
+from colorama import init, Fore, Style
 from termcolor import colored
-from fabulous import text, image
-
-def gradient_text(msg):
-    return text.Text(msg)
+import emoji
+init(autoreset=True)
 
 def print_gradient(msg):
-    print(gradient_text(msg))
+    """Простая альтернатива: цветной текст"""
+    colors = ['red', 'yellow', 'green', 'cyan', 'blue', 'magenta']
+    colored_text = ""
+    for i, char in enumerate(msg):
+        color = colors[i % len(colors)]
+        colored_text += colored(char, color)
+    print(colored_text)
 
-def colored_print(msg, color="white", effect=None):
-    print(colored(msg, color, attrs=effect if effect else []))
+# Остальные функции остаются
+def colored_print(msg, color="white", attrs=None):
+    print(colored(msg, color, attrs=attrs if attrs else []))
 
 def emoji_wrap(text, emote):
-    import emoji
     return f"{emoji.emojize(emote)} {text} {emoji.emojize(emote)}"

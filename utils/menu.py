@@ -2,7 +2,8 @@
 from art import text2art
 from tqdm import tqdm
 from time import sleep
-from utils.style import print_gradient, colored_print, emoji_wrap
+from utils.style import colored_print, emoji_wrap, print_gradient
+from colorama import Fore, Style
 
 def loading_screen():
     print_gradient("FunChatBot")
@@ -24,6 +25,7 @@ def show_main_menu():
     print(emoji_wrap("6. 🎲 Камень-Ножницы-Бумага", ":rock:"))
     print(emoji_wrap("7. 🔢 Угадай число", ":1234:"))
     print(emoji_wrap("8. 🎰 Поле чудес", ":ferris_wheel:"))
+    print(emoji_wrap("9. 🎮 Крестики-Нолики", ":x:"))
     colored_print(emoji_wrap("exit — выход", ":door:"), "yellow")
 
     return input(Fore.GREEN + "Выберите пункт: " + Style.RESET_ALL)
