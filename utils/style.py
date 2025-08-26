@@ -1,4 +1,4 @@
-from colorama import init, Fore, Style
+from colorama import init
 from termcolor import colored
 import emoji
 init(autoreset=True)

@@ -55,14 +55,14 @@ def makeMove(board, letter, move):
 def isWinner(bo, le):
     """Проверяет, выиграл ли игрок"""
     return (
-        (bo[7] == le and bo[8] == le and bo[9] == le) or  # верх
-        (bo[4] == le and bo[5] == le and bo[6] == le) or  # центр
-        (bo[1] == le and bo[2] == le and bo[3] == le) or  # низ
-        (bo[7] == le and bo[4] == le and bo[1] == le) or  # лево
-        (bo[8] == le and bo[5] == le and bo[2] == le) or  # центр колонка
-        (bo[9] == le and bo[6] == le and bo[3] == le) or  # право
-        (bo[7] == le and bo[5] == le and bo[3] == le) or  # диагональ
-        (bo[9] == le and bo[5] == le and bo[1] == le)     # диагональ
+        (bo[7] == le and bo[8] == le and bo[9] == le) or  
+        (bo[4] == le and bo[5] == le and bo[6] == le) or  
+        (bo[1] == le and bo[2] == le and bo[3] == le) or  
+        (bo[7] == le and bo[4] == le and bo[1] == le) or  
+        (bo[8] == le and bo[5] == le and bo[2] == le) or  
+        (bo[9] == le and bo[6] == le and bo[3] == le) or  
+        (bo[7] == le and bo[5] == le and bo[3] == le) or  
+        (bo[9] == le and bo[5] == le and bo[1] == le)     
     )
 
 
@@ -192,7 +192,7 @@ def main():
 
                 if isWinner(theBoard, computerLetter):
                     drawBoard(theBoard)
-                    print(colored(emoji.emojize("💀 Компьютер победил! Вы проиграли."), "red", attrs=["bold"]))
+                    print(colored(emoji.emojize("💀 Компьютер победил! Вы проиграли"), "red", attrs=["bold"]))
                     comp_wins += 1
                     gameIsPlaying = False
                 elif isBoardFull(theBoard):

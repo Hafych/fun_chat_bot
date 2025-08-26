@@ -1,6 +1,5 @@
 from utils.style import colored_print, emoji_wrap
 import random
-from termcolor import colored
 
 
 def play_rps():

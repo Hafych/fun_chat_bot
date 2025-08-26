@@ -24,9 +24,9 @@ def show_main_menu():
     print(emoji_wrap("4. 😂 Анекдот", ":face_with_tears_of_joy:"))
     print(emoji_wrap("5. 📖 Факт", ":books:"))
     print(emoji_wrap("6. 🎲 Камень-Ножницы-Бумага", ":rock:"))
-    print(emoji_wrap("7. 🔢 Угадай число", ":1234:"))
+    print("   7. Угадай число", ":1234")
     print(emoji_wrap("8. 🎰 Поле чудес", ":ferris_wheel:"))
-    print(emoji_wrap("9. 🎮 Крестики-Нолики", ":x:"))
+    print("   9. 🎮 Крестики-Нолики")
     colored_print(emoji_wrap("exit — выход", ":door:"), "yellow")
 
     return input(Fore.GREEN + "Выберите пункт: " + Style.RESET_ALL)
