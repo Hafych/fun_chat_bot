@@ -1,6 +1,6 @@
- # features/jokes.py
 from pyjokes import get_joke
 from utils.style import colored_print
+
 
 def tell_joke():
     try:

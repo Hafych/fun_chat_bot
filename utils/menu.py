@@ -1,15 +1,16 @@
-# utils/menu.py
 from art import text2art
 from tqdm import tqdm
 from time import sleep
 from utils.style import colored_print, emoji_wrap, print_gradient
 from colorama import Fore, Style
 
+
 def loading_screen():
     print_gradient("FunChatBot")
     for _ in tqdm(range(100), desc="Загрузка бота", ncols=100, bar_format="{l_bar}{bar}|"):
         sleep(0.02)
     print()
+
 
 def show_main_menu():
     colored_print("\n" + "="*60, "blue")

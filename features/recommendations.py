@@ -1,4 +1,3 @@
-# features/recommendations.py
 from prettytable import PrettyTable
 from utils.style import colored_print, emoji_wrap
 import random
@@ -21,6 +20,7 @@ GAMES = {
     'strategy': ['Civilization VI', 'XCOM 2']
 }
 
+
 def show_table(data, title):
     table = PrettyTable()
     table.field_names = ["Жанр", "Примеры"]
@@ -30,6 +30,7 @@ def show_table(data, title):
     colored_print(f"\n{emoji_wrap(title, ':sparkles:')}", "magenta")
     print(table)
 
+
 def get_choice(data, prompt):
     show_table(data, prompt)
     while True:
@@ -38,13 +39,16 @@ def get_choice(data, prompt):
             return data[choice]
         colored_print("❌ Нет такого жанра!", "red")
 
+
 def recommend_movie():
     result = random.choice(get_choice(MOVIES, "Фильмы"))
     colored_print(f"🎬 Рекомендую: {result}", "green")
 
+
 def recommend_music():
     result = random.choice(get_choice(MUSIC, "Музыка"))
     colored_print(f"🎵 Попробуйте: {result}", "cyan")
+
 
 def recommend_game():
     result = random.choice(get_choice(GAMES, "Игры"))

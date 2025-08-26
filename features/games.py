@@ -1,7 +1,7 @@
-# features/games.py
 from utils.style import colored_print, emoji_wrap
 import random
 from termcolor import colored
+
 
 def play_rps():
     choices = {'rock': '🪨', 'paper': '📄', 'scissors': '✂️'}
@@ -14,6 +14,7 @@ def play_rps():
     print(f"Вы: {choices[user]} vs Бот: {choices[bot]}")
     result = check_rps(user, bot)
     colored_print(result, "magenta")
+
 
 def check_rps(user, bot):
     win = {
@@ -28,6 +29,7 @@ def check_rps(user, bot):
     else:
         return "💀 Вы проиграли!"
 
+
 def play_guess_number():
     colored_print("\n" + emoji_wrap("Угадай число (1-10)", ":1234:"), "green")
     number = random.randint(1, 10)
@@ -39,6 +41,7 @@ def play_guess_number():
             colored_print(f"❌ Не угадали. Было: {number}", "red")
     except ValueError:
         colored_print("❗ Это не число!", "red")
+
 
 def play_wheel_of_fortune():
     words = ["python", "fun", "code", "music", "game"]

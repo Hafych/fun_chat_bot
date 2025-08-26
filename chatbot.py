@@ -1,9 +1,9 @@
-# chatbot.py
 from colorama import init
 from utils.menu import show_main_menu, loading_screen
 from features import recommendations, jokes, stories, games, tictactoe
 
 init(autoreset=True)
+
 
 def navigate(choice):
     if choice == '1':
@@ -32,12 +32,14 @@ def navigate(choice):
         from termcolor import colored
         print(colored("⚠️ Неверный выбор. Попробуйте снова.", "red"))
 
+
 def main():
     loading_screen()
     while True:
         choice = show_main_menu()
         navigate(choice)
         input("\nНажмите Enter, чтобы продолжить...")
+
 
 if __name__ == "__main__":
     main()
