@@ -1,6 +1,7 @@
 from colorama import init
 from utils.menu import show_main_menu, loading_screen
 from features import recommendations, jokes, stories, games, tictactoe
+from termcolor import colored
 
 init(autoreset=True)
 
@@ -25,11 +26,9 @@ def navigate(choice):
     elif choice == '9':
         tictactoe.main()
     elif choice.lower() == 'exit':
-        from termcolor import colored
         print(colored("👋 Спасибо за игру! До новых встреч!", "green", attrs=["bold"]))
         exit()
     else:
-        from termcolor import colored
         print(colored("⚠️ Неверный выбор. Попробуйте снова.", "red"))
 
 
