@@ -43,7 +43,22 @@ def play_guess_number():
 
 
 def play_wheel_of_fortune():
-    words = ["python", "fun", "code", "music", "game"]
+    words = ["python", "fun", "code", "music", "game", "variable", "function", "class", "object", "method", 
+             "attribute", "parameter", "argument", "return", "value", "integer", "float", "string", "boolean", 
+             "list", "tuple", "dictionary", "set", "index", "slice", "loop", "for", "while", "if", "elif", "else", 
+             "break", "continue", "pass", "None", "True", "False", "import", "module", "package", "library", "print", 
+             "input", "type", "isinstance", "len", "range", "enumerate", "zip", "map", "filter", "lambda", 
+             "comprehension", "generator", "iterator", "yield", "next", 
+             "iterable", "mutable", "immutable", "hashable", "key", "value", "item", "syntax", "indentation", 
+             "block", "scope", "global", "local", "closure", "nested", "recursion", "base case", "stack", "overflow", "error", 
+             "exception", "try", "except", "finally", "raise", "assert", "debug", "traceback", "name", "namespace", "global", 
+             "enclosing", "local", "PEP", "style", "comment", "docstring", "annotation", "def", "return", "class", 
+             "self", "cls", "super", "inheritance", "polymorphism", "encapsulation", "abstraction", "override", "overload", 
+             "dunder", "property", "getter", "setter", "decorator",
+             "with", "open", "file", "read", "write", "close", "encoding", "newline", "buffer", "mode", "JSON", "parse", 
+             "dump", "load", "encode", "decode", "API", "request", "response", "HTTP", "GET", "POST", "pip", "install", 
+             "venv", "activate", "git", "commit", "push", "pull", "clone", "repository", "async", "await", "thread", 
+             "multiprocessing", "concurrency", "parallelism", "callback"]
     word = random.choice(words)
     guessed = ["_"] * len(word)
     attempts = 6
